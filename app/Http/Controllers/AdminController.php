@@ -29,6 +29,6 @@ class AdminController extends Controller
             'role_id' => 1,
         ]);
 
-        return response()->json(['message' => 'Đã cập nhật thành Admin!']);
+        return response()->json(['message' => 'Đã cập nhật thành Admin thành công!']);
     }
 }
