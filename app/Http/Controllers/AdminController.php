@@ -15,7 +15,7 @@ class AdminController extends Controller
         $currentUser = auth()->user();
 
         if (!$currentUser || !UserRole::where('user_id', $currentUser->id)->where('role_id', $adminRole->id)->exists()) {
-            return response()->json(['message' => 'Unauthorized'], 403);
+            return response()->json(['message' => 'Không có quyền'], 403);
         }
 
         // Gán role admin cho user được chọn
