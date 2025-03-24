@@ -21,7 +21,7 @@ class AdminController extends Controller
         // Gán role admin cho user được chọn
         $user = User::find($userId);
         if (!$user) {
-            return response()->json(['message' => 'User not found'], 404);
+            return response()->json(['message' => 'Người dùng không tồn tại '], 404);
         }
 
         UserRole::firstOrCreate([
